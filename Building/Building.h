@@ -10,10 +10,12 @@ private:
 	double area;
 	int rooms;
 public:
+	Building() : street("Unknown"), area(0), rooms(0) {}
 	Building(std::string, double, int);
-	~Building() {}
+	virtual ~Building() {}
+
 	bool removeRoom(double);
-	void printOn(std::ostream&) const;
+	virtual void printOn(std::ostream&) const;
 
 	bool operator==(const std::string& street) const {
 		return this->street == street;
