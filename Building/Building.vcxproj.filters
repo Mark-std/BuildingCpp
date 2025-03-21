@@ -21,6 +21,9 @@
     <ClInclude Include="Rent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Cont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Building.cpp">
@@ -29,5 +32,13 @@
     <ClCompile Include="Build_flat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Container.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

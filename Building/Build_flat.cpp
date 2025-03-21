@@ -4,15 +4,20 @@
 Building::Building(std::string name, double area_, int rooms_) : street(name), rooms(rooms_), area(area_) {}
 
 void Building::printOn(std::ostream& out) const {
-	out << "вул. " << street << " - " << rooms << " кімн. (" << area << "кв.м)";
+	out << "st. " << street << " - " << rooms << " rooms. (" << area << " sq.un.)";
 }
 
 bool Building::removeRoom(double removed_area) {
-	if (rooms > 1) {
+	if (rooms > 1 && area - removed_area>0) {
 		area -= removed_area;
 		rooms--;
 		return true;
 	}
-	std::cout << "Не можливо забрати єдину кімнату!" << std::endl;
+	std::cout << "cant take last room" << std::endl;
 	return false;
+}
+
+std::ostream& operator<<(std::ostream& out, const Building& c) {
+	c.printOn(out);
+	return out;
 }
