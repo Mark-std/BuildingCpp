@@ -35,7 +35,6 @@ void Container::read_from_file(const std::string& file_name) {
 double Container::calc_total_cost(const std::string& street) const {
 	double sum = 0;
 	for (int i = 0; i < top; ++i) {
-		std::cout << "|" << arr[i]->getStreet() << "|";
 		if (street == arr[i]->getStreet()) {
 			sum += dynamic_cast<Rent*>(arr[i])->getTotalCost();
 		}
