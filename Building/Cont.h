@@ -16,7 +16,7 @@ public:
 
 	bool add_rent(const Rent&);
 	void read_from_file(const std::string&);
-
+	int get_top() const { return top; }
 	double calc_total_cost(const std::string&) const;
 
 	Building& operator[](int i) {
