@@ -5,7 +5,7 @@ Container c;
 
 TEST(Rent_Container, CreatingAndPulling) {
 	c.read_from_file("info.txt");
-	ASSERT_EQ(c.get_top(), 3);
+	ASSERT_EQ(c.get_top(), 4);
 }
 
 TEST(Rent_Contaniner, CheckTotalCost) {
