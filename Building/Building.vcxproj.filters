@@ -26,9 +26,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Building.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Build_flat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

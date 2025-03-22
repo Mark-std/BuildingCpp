@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Building.cpp" />
     <ClCompile Include="Build_flat.cpp" />
     <ClCompile Include="Container.cpp" />
   </ItemGroup>
