@@ -1,29 +1,14 @@
 # Проєкт BuildingCpp
 ### Опис
 
+> [!tip]
+> Для переключення між проектами використовувати **Project/Set as Startup Project**
+
 Цей проєкт містить реалізацію системи управління квартирами та їх орендою. Він складається з трьох основних частин:
  - Клас Квартира – описує квартиру з її характеристиками.
  - Клас Оренда – розширює Квартира, додаючи можливість оренди.
  - лас Оренди – управління списком орендованих квартир.
 
-``` python
-BuildingCpp/
-│── Building/
-│   ├── Build_flat.cpp
-│   ├── Building.h
-│   ├── Building.vcxproj.filters
-│   ├── Cont.h
-│   ├── Container.cpp
-│   ├── Rent.h
-│   ├── data.txt
-│── MainProject/
-│   ├── main.cpp
-│── Tests/
-│   ├── test_main.cpp
-│── README.md
-│── .gitignore
-│── BuildingCpp.sln
-```
 ---
 # Компоненти бібліотеки
 
