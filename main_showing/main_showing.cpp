@@ -80,6 +80,12 @@ int main()
         cout << "Total rental cost for " << street << ": " << total << endl;
         break;
     }
+    case 4: {
+        cout << "All rental properties:" << endl;
+        for (int i = 0; i < container.get_top(); i++) {
+            cout << container[i] << '\n';
+        }
+        break;
 
 }
 
