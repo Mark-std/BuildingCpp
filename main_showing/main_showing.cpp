@@ -45,6 +45,31 @@ int main()
         cout << "Data loaded from file " << filename << endl;
         break;
     }
+    case 2: {
+        int area, rooms;
+        double price, meters;
+        string address;
+
+        cout << "Enter address: ";
+        cin.ignore();
+        getline(cin, address);
+
+        cout << "Enter number of rooms: ";
+        cin >> rooms;
+
+        cout << "Enter area (sq.m): ";
+        cin >> meters;
+
+        cout << "Enter price: ";
+        cin >> price;
+
+        cout << "Enter floor: ";
+        cin >> area;
+
+        container.add_rent(Rent(rooms, price, address, meters, area));
+        cout << "New rental added successfully" << endl;
+        break;
+    }
 
 }
 
