@@ -48,6 +48,7 @@ void Container::save_to_file(const std::string& filename) {
 		std::cerr << "Error: Unable to open file " << filename << " for writing." << std::endl;
 		return;
 	}
+	if (top < 1) return;
 	file << top; file << '\n';
 	for (int k = 0; k < top; ++k) {
 		file << *arr[k];
