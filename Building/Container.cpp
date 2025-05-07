@@ -36,7 +36,7 @@ double Container::calc_total_cost(const std::string& street) const {
 	double sum = 0;
 	for (int i = 0; i < top; ++i) {
 		if (arr[i]->getStreet().find(street)<std::string::npos) { 
-			sum += dynamic_cast<Rent*>(arr[i])->getTotalCost();
+			sum += arr[i]->getTotalCost();
 		}
 	}
 	return sum;

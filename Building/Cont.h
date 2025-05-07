@@ -8,7 +8,7 @@
 class Container {
 private:
 	static const int MAX_SIZE = 100;
-	Building** arr = new Building * [MAX_SIZE];
+	Rent** arr = new Rent * [MAX_SIZE];
 	int top;
 public:
 	Container() : top(0) {}
@@ -21,7 +21,7 @@ public:
 	void save_to_file(const std::string& filename);
 	void delete_rent(int index);
 
-	Building& operator[](int i) {
+	Rent& operator[](int i) {
 		return *arr[i];
 	}
 };
