@@ -1,4 +1,4 @@
-#include "Cont.h"
+﻿#include "Cont.h"
 #include <fstream>
 
 Container::~Container() {
@@ -40,4 +40,33 @@ double Container::calc_total_cost(const std::string& street) const {
 		}
 	}
 	return sum;
+}
+void Container::save_to_file(const std::string& filename) {
+	std::ofstream file(filename);
+
+	if (!file.is_open()) {
+		std::cerr << "Error: Unable to open file " << filename << " for writing." << std::endl;
+		return;
+	}
+
+	/*for (int i = 0; i < top; i++) {
+		file << rooms() << " "
+			<< rents[i].price << " "
+			<< "\"" << rents[i] street << "\" "
+			<< rents[i] area  << " ";
+            cout << '\n';		
+	}*/
+
+	file.close();
+}
+void Container::delete_rent(int index) {
+	if (index < 0 || index >= top) {
+		return; 
+	}
+
+	for (int i = index; i < top - 1; i++) { // це для зсуву в ліво <-
+	// написав як вмію але не розумію ,тут  мають бути всі оренди як їх викликати   ->	rents[i] = rents[i + 1];
+	}
+
+	top--;
 }

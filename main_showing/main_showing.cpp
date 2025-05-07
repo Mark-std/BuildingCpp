@@ -92,18 +92,42 @@ int main()
             }
             break;
         }
-              //      //  case 5: {
-              //          //  cout << "Enter filename for saving (default " << filename << "): ";
-              ////string input;
-              //         //   cin.ignore();
-              //         //   getline(cin, input);
-              //            if (!input.empty()) {
-              //                filename = input;
-              //            }
-              //            container.save_to_file(filename);
-              //            cout << "Data saved to file " << filename << endl;
-              //            break;
-              //        }
+        case 5: {
+            cout << "Enter filename for saving (default " << filename << "): ";
+            string input;
+            cin.ignore();
+            getline(cin, input);
+            if (!input.empty()) {
+                filename = input;
+            }
+            container.save_to_file(filename);
+            cout << "Data saved to file " << filename << endl;
+            break;
+        }
+        case 6: {
+            if (container.get_top() == 0) {
+                cout << "No rentals to delete." << endl;
+                break;
+            }
+
+            cout << "Current rentals:" << endl;
+            for (int i = 0; i < container.get_top(); i++) {
+                cout << i + 1 << ". " << container[i] << '\n';
+            }
+
+            int index;
+            cout << "Enter the number of the rental to delete (1-" << container.get_top() << "): ";
+            cin >> index;
+
+            if (index < 1 || index > container.get_top()) {
+                cout << "Invalid rental number." << endl;
+            }
+            else {
+                container.delete_rent(index - 1);
+                cout << "Rental deleted successfully." << endl;
+            }
+            break;
+        }
         case 0:
             cout << "Thank you for using the Rental Management Program!" << endl;
             break;
