@@ -1,4 +1,4 @@
-#include "Cont.h"
+﻿#include "Cont.h"
 #include <iostream>
 using namespace std;
 int main()
@@ -86,6 +86,22 @@ int main()
             cout << container[i] << '\n';
         }
         break;
+    }
+    case 5: {
+        cout << "Enter filename for saving (default " << filename << "): ";
+        string input;
+        cin.ignore();
+        getline(cin, input);
+        if (!input.empty()) {
+            filename = input;
+        }
+        // треба дописати метод 
+        //container.save_to_file(filename);
+        cout << "Data saved to file " << filename << endl;
+        break;
+    }
+          case
+
 
 }
 
