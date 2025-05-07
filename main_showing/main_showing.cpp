@@ -32,6 +32,19 @@ int main()
         cout << "Your choice: ";
         cin >> choice;
     } while (choice != 0);
+    switch (choice) {
+    case 1: {
+        cout << "Enter filename (default " << filename << "): ";
+        string input;
+        cin.ignore();
+        getline(cin, input);
+        if (!input.empty()) {
+            filename = input;
+        }
+        container.read_from_file(filename);
+        cout << "Data loaded from file " << filename << endl;
+        break;
+    }
 
 }
 
