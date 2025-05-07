@@ -69,6 +69,16 @@ int main()
         container.add_rent(Rent(rooms, price, address, meters, area));
         cout << "New rental added successfully" << endl;
         break;
+    } 
+    case 3: {
+        string street;
+        cout << "Enter street name to calculate total cost: ";
+        cin.ignore();
+        getline(cin, street);
+
+        double total = container.calc_total_cost(street);
+        cout << "Total rental cost for " << street << ": " << total << endl;
+        break;
     }
 
 }
