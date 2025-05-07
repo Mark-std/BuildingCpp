@@ -1,4 +1,4 @@
-﻿#include "Cont.h"
+﻿#include "../Building/Cont.h"
 #include <iostream>
 using namespace std;
 int main()
