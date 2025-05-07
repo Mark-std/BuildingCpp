@@ -13,9 +13,6 @@ public:
 	Rent(const Rent& r) : day(r.day), price(r.price), Building(r) {}
 	~Rent() {};
 
-	Rent* clone() const override {
-		return new Rent(*this);
-	}
 	double getTotalCost() const { return price*day; }
 	int getDay() const { return day; }
 
@@ -27,6 +24,6 @@ public:
 	int operator+=(int days) {
 		return day += days;
 	}
+	friend std::ofstream& operator<<(std::ofstream& out, const Rent& c);
 };
-
 #endif

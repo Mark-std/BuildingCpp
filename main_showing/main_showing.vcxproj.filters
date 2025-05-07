@@ -22,6 +22,9 @@
   <ItemGroup>
     <Text Include="..\Building\data.txt" />
     <Text Include="info.txt" />
+    <Text Include="data.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

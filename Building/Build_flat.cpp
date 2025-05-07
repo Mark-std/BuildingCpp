@@ -21,3 +21,7 @@ std::ostream& operator<<(std::ostream& out, const Building& c) {
 	c.printOn(out);
 	return out;
 }
+
+void Building::writeTo(std::ofstream& out) const {
+	out << area << ' ' << rooms << ' ' << street << '\n';
+}

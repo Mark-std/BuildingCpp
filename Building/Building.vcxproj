@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Build_flat.cpp" />
     <ClCompile Include="Container.cpp" />
+    <ClCompile Include="Rent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Building.h" />

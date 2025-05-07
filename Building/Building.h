@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 class Building {
 private:
@@ -15,13 +16,13 @@ public:
 	virtual ~Building() {}
 
 	bool removeRoom(double);
-	virtual Building* clone() const = 0;
 	virtual void printOn(std::ostream&) const;
 	std::string getStreet() const { return street; }
+	void writeTo(std::ofstream& out) const;
 
 	bool operator==(const std::string& street) const {
 		return this->street == street;
-	} 
+	}
 };
 
 std::ostream& operator<<(std::ostream& out, const Building& c);

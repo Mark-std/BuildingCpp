@@ -10,7 +10,7 @@ Container::~Container() {
 
 bool Container::add_rent(const Rent& r) {
 	if (top < MAX_SIZE) {
-		arr[top++] = r.clone(); return true;
+		arr[top++] = new Rent(r); return true;
 	}
 	return false;
 }
@@ -35,7 +35,7 @@ void Container::read_from_file(const std::string& file_name) {
 double Container::calc_total_cost(const std::string& street) const {
 	double sum = 0;
 	for (int i = 0; i < top; ++i) {
-		if (arr[i]->getStreet().find(street)<std::string::npos) { 
+		if (arr[i]->getStreet()==street) {
 			sum += arr[i]->getTotalCost();
 		}
 	}
@@ -48,25 +48,27 @@ void Container::save_to_file(const std::string& filename) {
 		std::cerr << "Error: Unable to open file " << filename << " for writing." << std::endl;
 		return;
 	}
-
-	/*for (int i = 0; i < top; i++) {
-		file << rooms() << " "
-			<< rents[i].price << " "
-			<< "\"" << rents[i] street << "\" "
-			<< rents[i] area  << " ";
-            cout << '\n';		
-	}*/
+	file << top; file << '\n';
+	for (int k = 0; k < top; ++k) {
+		file << *arr[k];
+	}
 
 	file.close();
 }
-void Container::delete_rent(int index) {
-	if (index < 0 || index >= top) {
-		return; 
-	}
+void Container::delete_rent(const std::string& street) {
+	if (top < 1) return;
 
-	for (int i = index; i < top - 1; i++) { // це для зсуву в ліво <-
-	// написав як вмію але не розумію ,тут  мають бути всі оренди як їх викликати   ->	rents[i] = rents[i + 1];
-	}
+	Rent* temp = nullptr;
 
-	top--;
+	for (int i = 0; i < top; ++i) {
+		if (arr[i]->getStreet() == street) {
+			delete arr[i];
+			for (int t = i + 1; t < top; ++t) {
+				arr[t - 1] = arr[t];
+			}
+			std::cout << "deleted";
+			top--;
+			return;
+		}
+	}
 }

@@ -5,7 +5,7 @@ int main()
 {
     Container container;
 
-    container.read_from_file("info.txt");
+    container.read_from_file("data.txt");
 
     container.add_rent(Rent(4, 55.4, "Kovalya 2", 56.4, 4));
     double total = container.calc_total_cost("Kovalcheyko 1");
@@ -123,7 +123,6 @@ int main()
                 cout << "Invalid rental number." << endl;
             }
             else {
-                container.delete_rent(index - 1);
                 cout << "Rental deleted successfully." << endl;
             }
             break;

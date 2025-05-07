@@ -18,8 +18,8 @@ public:
 	void read_from_file(const std::string&);
 	int get_top() const { return top; }
 	double calc_total_cost(const std::string&) const;
-	void save_to_file(const std::string& filename);
-	void delete_rent(int index);
+	void save_to_file(const std::string&);
+	void delete_rent(const std::string&);
 
 	Rent& operator[](int i) {
 		return *arr[i];
