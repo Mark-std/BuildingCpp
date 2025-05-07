@@ -31,7 +31,7 @@ int main()
         cout << "0. Exit" << endl;
         cout << "Your choice: ";
         cin >> choice;
-    } while (choice != 0);
+    } 
     switch (choice) {
     case 1: {
         cout << "Enter filename (default " << filename << "): ";
@@ -100,9 +100,13 @@ int main()
         cout << "Data saved to file " << filename << endl;
         break;
     }
-          case
-
-
+    case 0:
+        cout << "Thank you for using the Rental Management Program!" << endl;
+        break;
+    default:
+        cout << "Invalid choice. Please try again." << endl;
+    }
+    while (choice != 0);
 }
 
 
