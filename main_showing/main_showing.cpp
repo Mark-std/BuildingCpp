@@ -18,8 +18,14 @@ int main()
 
     int choice;
     string filename = "info.txt";
-
-    cout << "Rental Management Program" << endl;
+    cout << "=============================" << endl;
+    cout << "   Welcome to the Program!   " << endl;
+    cout << "   Building.cpp          " << endl;
+    cout << "=============================" << endl;
+    cout << endl;
+    cout << "This program will help you with construction and calculating necessary parameters." << endl;
+    cout << endl;
+    cout << "=============================" << endl;
 
     do {
         cout << "\nMenu:" << endl;
