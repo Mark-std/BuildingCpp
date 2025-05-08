@@ -23,8 +23,6 @@ int main()
     cout << "   Building.cpp          " << endl;
     cout << "=============================" << endl;
     cout << endl;
-    cout << "This program will help you with construction and calculating necessary parameters." << endl;
-    cout << endl;
     cout << "=============================" << endl;
 
     do {
@@ -34,6 +32,8 @@ int main()
         cout << "3. Calculate total cost by street" << endl;
         cout << "4. Show all rental properties" << endl;
         cout << "0. Exit" << endl;
+        cout << "5. Save data to file" << endl;
+        cout << "6. Delete rent" << endl;
         cout << "Your choice: ";
         cin >> choice;
 
