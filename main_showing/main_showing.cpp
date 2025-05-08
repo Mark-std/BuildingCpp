@@ -31,9 +31,9 @@ int main()
         cout << "2. Add new rental" << endl;
         cout << "3. Calculate total cost by street" << endl;
         cout << "4. Show all rental properties" << endl;
-        cout << "0. Exit" << endl;
         cout << "5. Save data to file" << endl;
         cout << "6. Delete rent" << endl;
+        cout << "0. Exit" << endl;
         cout << "Your choice: ";
         cin >> choice;
 
